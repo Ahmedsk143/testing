@@ -76,7 +76,6 @@ jobs:
           name: Deploy Frontend
           command: |
             npm run frontend:build
-
 workflows:
   udagram:
     jobs:
