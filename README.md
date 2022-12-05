@@ -1,14 +1,3 @@
-`POSTGRES_HOST` : postgresdb.cq1pjryaw9ld.us-east-1.rds.amazonaws.com  
-`POSTGRES_USERNAME` :postgres  
-`POSTGRES_DB` : postgresdb  
-`POSTGRES_PASSWORD` : postgres  
-`PORT` : 5432  
-`AWS_REGION` : us-east-1d  
-`AWS_PROFILE` : default  
-`AWS_BUCKET` : elasticbeanstalk-us-east-1-014785883997  
-`URL` : http://udagramapi-env.eba-dfmjmpbp.us-east-1.elasticbeanstalk.com/  
-`JWT_SECRET` : 1234
-
 # Hosting a Full-Stack Application
 
 # Udagram Application
@@ -30,12 +19,6 @@ This application is provided to you as an alternative starter project if you do 
 
 ```
 
-# Getting Started
-
-1. Clone this repository
-2. Move the content of the udagram folder at the root of the repository as this will become the main content of the project.
-3. Open a terminal and navigate to the root of the repo and follow the instructions in the installation step.
-
 ### Installation
 
 Provision the necessary AWS services needed for running the application:
@@ -54,8 +37,6 @@ This project contains two different test suite: unit tests and End-To-End tests(
 2. `npm run test`
 3. `npm run e2e`
 
-There are no Unit test on the back-end
-
 ### Unit Tests:
 
 Unit tests are using the Jasmine Framework.
@@ -66,6 +47,6 @@ The e2e tests are using Protractor and Jasmine.
 
 ## Built With
 
-- [Angular](https://angular.io/) - Single Page Application Framework
-- [Node](https://nodejs.org) - Javascript Runtime
-- [Express](https://expressjs.com/) - Javascript API Framework
+- Angular
+- nodejs and express.js
+- Postgres DB

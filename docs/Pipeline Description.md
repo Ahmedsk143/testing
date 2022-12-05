@@ -1,7 +1,5 @@
 # Pipeline Description
 
-![](pipeline_architecture.png)
-
 ## 1. Connect the Pipeline to Github
 
 1. Create pipeline file in **.cirleci** folder and name it's **config.yml**
