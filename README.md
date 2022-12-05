@@ -1,6 +1,18 @@
+`POSTGRES_HOST` : postgresdb.cq1pjryaw9ld.us-east-1.rds.amazonaws.com  
+`POSTGRES_USERNAME` :postgres  
+`POSTGRES_DB` : postgresdb  
+`POSTGRES_PASSWORD` : postgres  
+`PORT` : 5432  
+`AWS_REGION` : us-east-1d  
+`AWS_PROFILE` : default  
+`AWS_BUCKET` : elasticbeanstalk-us-east-1-014785883997  
+`URL` : http://udagramapi-env.eba-dfmjmpbp.us-east-1.elasticbeanstalk.com/  
+`JWT_SECRET` : 1234
+
 # Hosting a Full-Stack Application
 
 # Udagram Application
+
 This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
 
 ### Dependencies
@@ -19,6 +31,7 @@ This application is provided to you as an alternative starter project if you do 
 ```
 
 # Getting Started
+
 1. Clone this repository
 2. Move the content of the udagram folder at the root of the repository as this will become the main content of the project.
 3. Open a terminal and navigate to the root of the repo and follow the instructions in the installation step.
