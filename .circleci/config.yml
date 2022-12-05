@@ -72,7 +72,7 @@ jobs:
           name: Deploy Backend
           command: |
             npm run api:build
-            - run:
+      - run:
           name: Deploy Frontend
           command: |
             npm run frontend:build

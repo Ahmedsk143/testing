@@ -1,12 +1,11 @@
-import * as dotenv from "dotenv";
+import * as dotenv from 'dotenv';
 import cors from 'cors';
-import express from "express";
-import { sequelize } from "./sequelize";
+import express from 'express';
+import { sequelize } from './sequelize';
 
-import { IndexRouter } from "./controllers/v0/index.router";
-
-import bodyParser from "body-parser";
-import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
+import { IndexRouter } from './controllers/v0/index.router';
+import bodyParser from 'body-parser';
+import { V0_FEED_MODELS, V0_USER_MODELS } from './controllers/v0/model.index';
 
 (async () => {
   dotenv.config();
@@ -15,7 +14,7 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
   await sequelize.addModels(V0_USER_MODELS);
   await sequelize.sync();
 
-  console.log("Database Connected");
+  console.log('Database Connected');
 
   const app = express();
   const port = process.env.PORT || 8080;
@@ -24,26 +23,32 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
 
   // app.use(cors());
   // We set the CORS origin to * so that we don't need to
-  // worry about the complexities of CORS. 
-  app.use(cors({
-    "allowedHeaders": [
-      'Origin', 'X-Requested-With',
-      'Content-Type', 'Accept',
-      'X-Access-Token', 'Authorization', 'Access-Control-Allow-Origin',
-      'Access-Control-Allow-Headers',
-      'Access-Control-Allow-Methods'
-    ],
-    "methods": 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
-    "preflightContinue": true,
-    "origin": '*',
-  }));
+  // worry about the complexities of CORS.
+  app.use(
+    cors({
+      allowedHeaders: [
+        'Origin',
+        'X-Requested-With',
+        'Content-Type',
+        'Accept',
+        'X-Access-Token',
+        'Authorization',
+        'Access-Control-Allow-Origin',
+        'Access-Control-Allow-Headers',
+        'Access-Control-Allow-Methods',
+      ],
+      methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
+      preflightContinue: true,
+      origin: '*',
+    })
+  );
 
-  app.use("/api/v0/", IndexRouter);
+  app.use('/api/v0/', IndexRouter);
 
   // Root URI call
-  app.get("/", async (req, res) => {
-    console.log("CC332")
-    res.send("/api/v0/");
+  app.get('/', async (req, res) => {
+    console.log('CC332');
+    res.send('/api/v0/');
   });
 
   // Start the Server
