@@ -10,8 +10,6 @@
 4. Set up a new project in CircleCI dashboard using newly created GitHub repository. Select the existing **.circleci/config.yml** file already present in the repository.
 5. Test that the pipeline is working. Commit and push a new change on the repository. This should trigger a pipeline run in the CircleCI UI.
 
-**NOTE:** If the Github repo is connected to CircleCI correctly, then the commits/pushes to repo will trigger the CI/CD pipeline automatically.
-
 ## 2. Continuous Integration
 
 1. **Update the root package.json**
